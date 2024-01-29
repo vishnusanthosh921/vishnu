@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+  <!-- <style>
+        body {
+            background-color: #fff;
+            color: #333;
+        }
+        .navbar {
+            background-color: #dc3545;
+            color: #fff;
+        }
+        .jumbotron {
+            background-color: #dc3545;
+            color: #fff;
+        }
+        .section-content {
+            padding: 50px 0;
+        }
+    </style> -->
+</head>
+<body>
+<!-- 
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#">Electronic Store</a>
+</nav> -->
+
+<div class="jumbotron text-center" style="background-color: rgb(255, 66, 66);">
+    <h1 class="display-4">About Us</h1>
+    <p class="lead">Your go-to destination for the latest electronic gadgets!</p>
+</div>
+
+<div class="container">
+    <div class="row section-content">
+        <div class="col-md-6">
+            <h2> <i>Our Commitment</h2></i> 
+            <p>We are committed to providing the best shopping experience for our customers. Our focus includes:</p>
+            <ul>
+                <li><strong>Free and Fast Shipping:</strong> Enjoy free and fast shipping on all orders.</li>
+                <li><strong>Easy Shopping:</strong> Our website is designed for a seamless and enjoyable shopping experience.</li>
+            </ul>
+            <img src="{% static 'img/fastdelivery.jpg' %}" alt="Shipping Image" class="img-fluid">
+        </div>
+        <div class="col-md-6">
+            <h2> <i>Customer Support and Returns</h2></i> 
+            <p>At Electronic Store, we prioritize your satisfaction with:</p>
+            <ul>
+                <li><strong>24/7 Customer Support:</strong> Our support team is available around the clock to assist you.</li> <br>
+                <li><strong>Easy Return Policy:</strong> Not satisfied with your purchase? We offer a hassle-free return policy.</li>
+            </ul>
+            <img src="{% static 'img/returnpolicy.jpg' %}" alt="Support Image" class="img-fluid" style="height: 350px; width: 350px;">
+        </div>
+    </div>
+</div>
+<!-- Start Team Section -->
+  <!-- <div class="untree_co-section"> -->
+    <!-- ... (unchanged) ... -->
+    <!-- <div class="container"> -->
+
+      <div class="row mb-5">
+        <div class="col-lg-5 mx-auto text-center">
+          <h2 class="section-title">Our Team</h2>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <!-- Start Column 1 -->
+        <div class="col-12 col-md-6 col-lg-3 mb-5 mb-md-0" >
+          <img src="{% static 'img\man_3001758.png' %}" class="img-fluid mb-5">
+          <h3 clas><a href="#"><span class="">Vishnu K</span> Santhosh</a></h3>
+          <span class="d-block position mb-4">CEO, Founder, ELECTRO.</span>
+          <!-- <p>Separated they live in.
+          Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+          <p class="mb-0"><a href="#" class="more dark">Learn More <span class="icon-arrow_forward"></span></a></p> -->
+        </div> 
+        <!-- End Column 1 -->
+
+        <!-- Start Column 2 -->
+        <div class="col-12 col-md-6 col-lg-3 mb-5 mb-md-0">
+          <img src="{% static 'img\man_4139981.png' %}" class="img-fluid mb-5">
+
+          <h3 clas><a href="#"><span class="">Hari</span> Krishna</a></h3>
+          <span class="d-block position mb-4">Co-Founder, ELECTRO.</span>
+          <!-- <p>Separated they live in.
+          Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+          <p class="mb-0"><a href="#" class="more dark">Learn More <span class="icon-arrow_forward"></span></a></p> -->
+
+        </div> 
+        <!-- End Column 2 -->
+
+        <!-- Start Column 3 -->
+        <div class="col-12 col-md-6 col-lg-3 mb-5 mb-md-0">
+          <img src="{% static 'img\man_4140048.png' %}" class="img-fluid mb-5">
+          <h3 clas><a href="#"><span class="">Sanal</span> Czr</a></h3>
+          <span class="d-block position mb-4">Co-Founder, ELECTRO.</span>
+          <!-- <p>Separated they live in.
+          Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+          <p class="mb-0"><a href="#" class="more dark">Learn More <span class="icon-arrow_forward"></span></a></p> -->
+        </div> 
+        <!-- End Column 3 -->
+
+        <!-- Start Column 4 -->
+        <div class="col-12 col-md-6 col-lg-3 mb-5 mb-md-0">
+          <img src="{% static 'img\man_4202843.png' %}" class="img-fluid mb-5">
+
+          <h3 clas><a href="#"><span class="">Jyothy</span> Basu</a></h3>
+          <span class="d-block position mb-4">Co-Founder, ELECTRO.</span>
+          <!-- <p>Separated they live in.
+          Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+          <p class="mb-0"><a href="#" class="more dark">Learn More <span class="icon-arrow_forward"></span></a></p> -->
+
+        
+        </div> 
+        <!-- End Column 4 -->
+
+        
+
+      </div>
+    </div>
+  </div>
+  <!-- End Team Section -->
+
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+
+{% block content%}
+{%load static%}
+
+<link rel="stylesheet" href="{% static 'css/categories.css'%}">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<div class="col-md-12 mb-0">
+    <strong><a href="{% url 'home' %}" class="text-black" style="color: black">Home Page</a></strong>
+    <span class="mx-2 mb-0">/</span> 
+    <strong class="text-black" style="color: black;">Categories</strong>
+  </div>
+
+<div class="container mt-100">
+        
+    <div class="row">
+        <div class="col-md-4 col-sm-6">
+            <div class="card mb-30" style="width: 350px; height: 350px;"><a class="card-img-tiles" href="#" data-abc="true">
+                    <div class="inner">
+                        <div class="main-img"><img src="https://i.imgur.com/O0GMYuw.jpg" alt="Category"></div>
+                        <div class="thumblist"><img src="https://i.imgur.com/ILEU18M.jpg" alt="Category">
+                            <img src="https://i.imgur.com/2kePJmX.jpg" alt="Category">
+                        </div>
+                    </div>
+                </a>
+                <div class="card-body text-center">
+                    <h4 class="card-title">Laptops</h4>
+                    <p class="text-muted">Starting from ₹29999</p>
+                    <a class="btn btn-outline-primary btn-sm" href="{% url 'laptops' %}" data-abc="true">View Products</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6" style="display: flex;">
+            <div class="card mb-30" style="width: 350px; height: 350px;"><a class="card-img-tiles" href="#" data-abc="true">
+                    <div class="inner">
+                        <div class="main-img"><img src="{% static 'img/iphone-mobile.png' %}" alt="Category"></div>
+                        <div class="thumblist"><img src="{% static 'img/reno-mobile.png' %}" alt="Category">
+                            <img src="{% static 'img/mobile01.jpg' %}" alt="Category">
+                        </div>
+                    </div>
+                </a>
+                <div class="card-body text-center">
+                    <h4 class="card-title">Mobiles</h4>
+                    <p class="text-muted">Starting from ₹8999</p>
+                    <a class="btn btn-outline-primary btn-sm" href="{% url 'mobiles' %}" data-abc="true">View Products</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="card mb-30" style="width: 350px; height: 350px;"><a class="card-img-tiles" href="#" data-abc="true">
+                    <div class="inner">
+                        <div class="main-img"><img src="{% static 'img/camera01.jpg' %}" alt="Category"></div>
+                        <div class="thumblist"><img src="{% static 'img/camera02.jpg' %}" alt="Category">
+                            <img src="{% static 'img/camera03.jpg' %}" alt="Category">
+                        </div>
+                    </div>
+                </a>
+                <div class="card-body text-center">
+                    <h4 class="card-title">Cameras and Photography</h4>
+                    <p class="text-muted">Starting from ₹25999</p>
+                    <a class="btn btn-outline-primary btn-sm" href="{% url 'cameras' %}" data-abc="true">View Products</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-sm-6">
+        <div class="card mb-30" style="width: 350px; height: 350px;"><a class="card-img-tiles" href="#" data-abc="true">
+                <div class="inner">
+                    <div class="main-img"><img src="{% static 'img/apple-head.png' %}" alt="Category"></div>
+                    <div class="thumblist"><img src="{% static 'img/head02.jpg' %}" alt="Category">
+                        <img src="{% static 'img/head03.jpg' %}" alt="Category">
+                    </div>
+                </div>
+            </a>
+            <div class="card-body text-center">
+                <h4 class="card-title">Headphones and Accessories</h4>
+                <p class="text-muted">Starting from ₹299</p>
+                <a class="btn btn-outline-primary btn-sm" href="{% url 'headphones' %}" data-abc="true">View Products</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-md-4 col-sm-6">
+        <div class="card mb-30" style="width: 350px; height: 350px;"><a class="card-img-tiles" href="#" data-abc="true">
+                <div class="inner">
+                    <div class="main-img"><img src="{% static 'img/roarX-char.png' %}" alt="Category"></div>
+                    <div class="thumblist"><img src="{% static 'img/boat-char.png' %}" alt="Category">
+                        <img src="{% static 'img/power03.jpg' %}" alt="Category">
+                    </div>
+                </div>
+            </a>
+            <div class="card-body text-center">
+                <h4 class="card-title">Power Banks and Chargers</h4>
+                <p class="text-muted">Starting from ₹199</p>
+                <a class="btn btn-outline-primary btn-sm" href="{% url 'powerbanks' %}"  data-abc="true">View Products</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-md-4 col-sm-6">
+        <div class="card mb-30" style="width: 350px; height: 350px;"><a class="card-img-tiles" href="#" data-abc="true">
+                <div class="inner">
+                    <div class="main-img"><img src="{% static 'img/dmpendrive-access.png' %}" alt="Category"></div>
+                    <div class="thumblist"><img src="{% static 'img/access02.jpg' %}" alt="Category">
+                        <img src="{% static 'img/access03.jpg' %}" alt="Category">
+                    </div>
+                </div>
+            </a>
+            <div class="card-body text-center">
+                <h4 class="card-title">Accessories</h4>
+                <p class="text-muted">Starting from ₹199</p>
+                <a class="btn btn-outline-primary btn-sm" href="{% url 'accessories' %}" data-abc="true">View Products</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

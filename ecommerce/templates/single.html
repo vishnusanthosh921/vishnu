@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+{%load static%}
+
+    <div class="bg-light py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mb-0"><a href="{% url 'home'%}">Home</a> <span class="mx-2 mb-0">/</span> <a
+              href="">Store</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">{{l.name}}</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5 mr-auto">
+            <div class="border text-center">
+              <img src="{{l.image.url}}" alt="Image" class="img-fluid p-5">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h2 class="text-black">{{l.name}}</h2>
+            <p>{{l.description}}</p>
+            
+
+            <p><del>₹{{l.price}}</del>  <strong class="text-primary h4">₹{{l.discount}}</strong></p>
+
+            
+            
+            <div class="mb-5">
+              <div class="input-group mb-3" style="max-width: 220px;">
+                <!-- <div class="input-group-prepend">
+                  <button class="btn btn-outline-primary js-btn-minus" type="button">&minus;</button>
+                </div>
+                <input type="text" class="form-control text-center" value="1" placeholder=""
+                  aria-label="Example text with button addon" aria-describedby="button-addon1">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-primary js-btn-plus" type="button">&plus;</button>
+                </div> -->
+              </div>
+    
+            </div>
+            <p>
+            {% if request.session.id %}
+          
+            <form action="addcart/{{l.id}}" method="post">
+              {% csrf_token %}
+             <input type="submit" value="Add to cart" class="buy-now btn btn-sm height-auto px-4 py-3 btn-danger">      
+            </form>
+            {% else %}
+            <a class="cart" href="{% url 'cartt'%}" class="buy-now btn btn-sm height-auto px-4 py-3 btn-danger">Add To Cart</a>
+
+            {% endif %}
+          </p>
+
+
+            <div class="mt-5">
+              </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   
+ {% endblock %}

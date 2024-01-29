@@ -1,0 +1,85 @@
+{% extends 'base.html'%} 
+ 
+{% block content %} 
+    {% load static %} 
+
+
+    <div class="bg-light py-3">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 mb-0">
+              <a href="{% url 'home'%}">Home</a> <span class="mx-2 mb-0">/</span>
+              <strong class="text-black">Login Page</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="form-modal"> 
+     
+        <div class="form-toggle"> 
+            <button id="login-toggle" onclick="toggleLogin()">log in</button> 
+            <button id="signup-toggle" onclick="toggleSignup()">sign up</button> 
+        </div> 
+     
+        <div id="login-form"> 
+            <form action="login" method="post"> 
+                {% csrf_token %} 
+                <input type="text" name="username" placeholder="Enter username"/> 
+                <input type="password" name="password" placeholder="Enter password"/> 
+                {% for msg in messages %}
+                {% if 'login' in msg.tags %}
+                <div class="group" style="text-align: center;">
+                <label for="pass" class="label" style="color: red;">{{msg}}</label>
+                </div>
+                {% endif %}
+                {% endfor %}
+                <button type="submit" class="btn login">login</button> 
+                <p><a href="{% url 'forgot' %}">Forgot Password?</a></p> 
+                <hr/> 
+            </form> 
+        </div> 
+     
+        <div id="signup-form"> 
+            <form action="signup" method="post"> 
+                {% csrf_token %} 
+                <input type="text" name="name" placeholder="Enter your name"> 
+                <input type="email" name="email" placeholder="Enter your email"/> 
+                <input type="text" name="phone" placeholder="Choose phone number"/> 
+                <input type="text" name="username" placeholder="Choose username"/> 
+                <input type="password" name="password" placeholder="Create password"/> 
+                <input type="password" name="repassword" placeholder="Confirm password"/> 
+                {% for msg in messages %}
+                {% if 'signup' in msg.tags %}
+                <div class="group" style="text-align: center;">
+                <label for="pass" class="label" style="color: red;">{{msg}}</label>
+                </div>
+                {% endif %}
+                {% endfor %}
+                <button type="submit" name="save" class="btn signup">create account</button> 
+                <p>Clicking <strong>create account</strong> means that you are agree to our <a href="{% static 'javascript:void(0)' %}">terms of services</a>.</p> 
+                <hr/> 
+            </form> 
+        </div> 
+    </div> 
+    <br><br>
+    <script>
+        function toggleSignup(){ 
+    document.getElementById("login-toggle").style.backgroundColor="#fff"; 
+    document.getElementById("login-toggle").style.color="#222"; 
+    document.getElementById("signup-toggle").style.backgroundColor="#ff0000"; 
+    document.getElementById("signup-toggle").style.color="#fff"; 
+    document.getElementById("login-form").style.display="none"; 
+    document.getElementById("signup-form").style.display="block"; 
+ } 
+  
+function toggleLogin(){ 
+    document.getElementById("login-toggle").style.backgroundColor="#ff0000"; 
+    document.getElementById("login-toggle").style.color="#fff"; 
+    document.getElementById("signup-toggle").style.backgroundColor="#fff"; 
+    document.getElementById("signup-toggle").style.color="#222"; 
+    document.getElementById("signup-form").style.display="none"; 
+    document.getElementById("login-form").style.display="block"; 
+ }
+    </script>
+     
+{% endblock %}
